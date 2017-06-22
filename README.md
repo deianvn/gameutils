@@ -1,2 +1,1 @@
-# gameutils
-Game library based on libGDX
+Game Utils
