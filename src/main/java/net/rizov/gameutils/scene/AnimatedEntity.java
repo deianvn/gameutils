@@ -48,7 +48,7 @@ public class AnimatedEntity extends RoomEntity {
 
     @Override
     public void draw() {
-        SpriteBatch sb =  getRoom().getGame().getSpriteBatch();
+        SpriteBatch sb = getRoom().getGame().getSpriteBatch();
         sb.draw(animation.getKeyFrame(time), getPositionX(), getPositionY());
     }
 

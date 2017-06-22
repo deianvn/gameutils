@@ -7,7 +7,7 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 
 public class TextureEntity extends RoomEntity {
 
-	private TextureRegion textureRegion;
+    private TextureRegion textureRegion;
 
     public TextureEntity(RoomEntity parent) {
         super(parent);
@@ -15,7 +15,7 @@ public class TextureEntity extends RoomEntity {
 
     public void setTextureRegion(String regionName, String atlasName) {
         setTextureRegion(getRoom().getAsset(atlasName, TextureAtlas.class).findRegion(regionName));
-	}
+    }
 
     public void setTextureRegion(String textureName) {
         Texture texture = getRoom().getAsset(textureName, Texture.class);
@@ -32,26 +32,26 @@ public class TextureEntity extends RoomEntity {
         onRegionChanged();
     }
 
-	public TextureRegion getTextureRegion() {
-		return textureRegion;
-	}
+    public TextureRegion getTextureRegion() {
+        return textureRegion;
+    }
 
     public void removeTextureRegion() {
         textureRegion = null;
     }
 
     @Override
-	public void draw() {
+    public void draw() {
         SpriteBatch sb = getRoom().getGame().getSpriteBatch();
 
-		if (textureRegion != null) {
-			sb.draw(textureRegion,
-					getPositionX() + getOriginX(), getPositionY() + getOriginY(),
-					getOriginX(), getOriginY(),
-					textureRegion.getRegionWidth(), textureRegion.getRegionHeight(),
-					getScaleX(), getScaleY(), getRotation());
-		}
-	}
+        if (textureRegion != null) {
+            sb.draw(textureRegion,
+                    getPositionX() + getOriginX(), getPositionY() + getOriginY(),
+                    getOriginX(), getOriginY(),
+                    textureRegion.getRegionWidth(), textureRegion.getRegionHeight(),
+                    getScaleX(), getScaleY(), getRotation());
+        }
+    }
 
     @Override
     protected void computeDimensions() {
