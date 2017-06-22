@@ -8,7 +8,7 @@ import com.badlogic.gdx.utils.Array;
 
 public class AnimatedEntity extends RoomEntity {
 
-    private Animation animation;
+    private Animation<TextureRegion> animation;
 
     private float time = 0f;
 

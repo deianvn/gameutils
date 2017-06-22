@@ -7,7 +7,7 @@ apply plugin: 'maven'
 sourceCompatibility = 1.6
 
 ext {
-    gdxVersion = '1.9.1'
+    gdxVersion = '1.9.6'
 }
 
 repositories {
